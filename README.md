@@ -1,13 +1,58 @@
-## Olá! Eu sou o Eduardo Grillo.
+# Bem-vindo ao meu perfil do GitHub!
 
-[![Facebook](https://img.shields.io/badge/Facebook-1877F2?style=for-the-badge&logo=facebook&logoColor=white)](https://www.facebook.com/eduardo.grillo.54)
-[![Telegram](https://img.shields.io/badge/Telegram-2CA5E0?style=for-the-badge&logo=telegram&logoColor=white)](https://t.me/eduardogrilloo)
-[![Instagram](https://img.shields.io/badge/Instagram-E4405F?style=for-the-badge&logo=instagram&logoColor=white)](https://www.instagram.com/eduardogrillo_/)
-[![Twitter](https://img.shields.io/badge/Twitter-1DA1F2?style=for-the-badge&logo=twitter&logoColor=white)](https://twitter.com/EduardoGrillo_)
+Olá! Sou [Seu Nome], e este é o meu perfil no GitHub. Aqui você encontrará uma coleção de projetos, códigos e ideias que refletem a minha jornada de aprendizado e exploração.
 
-![Eduardo GitHub stats](https://github-readme-stats.vercel.app/api?username=eduardogrillo&show_icons=true&theme=dracula&count_private=true)
+## Sobre Mim
 
-"A força não provém da capacidade física. Provém de uma vontade indomável." - Mahatma Gandhi 
+- 👩‍💻 Desenvolvedor(a) Apaixonado(a)
+- 🌱 Aprendendo e crescendo todos os dias
+- 🎮 Amante de jogos e tecnologia
+- 📚 Compartilhando conhecimento e experiências
 
+## Projetos em Destaque
 
+- [Nome do Projeto 1](link_do_projeto_1) - Breve descrição do projeto.
+- [Nome do Projeto 2](link_do_projeto_2) - Breve descrição do projeto.
 
+## Joguinho em C++
+
+### Jogo da Adivinhação
+
+![Jogo da Adivinhação](c++_game.png)
+
+Um simples jogo de adivinhação onde você tenta adivinhar o número gerado aleatoriamente. Teste sua intuição!
+
+```cpp
+#include <iostream>
+#include <cstdlib>
+#include <ctime>
+
+using namespace std;
+
+int main() {
+    srand(time(0));
+    int numeroAleatorio = rand() % 100 + 1;
+    
+    int tentativa, tentativas = 0;
+    bool acertou = false;
+
+    cout << "Bem-vindo ao Jogo da Adivinhação!" << endl;
+    cout << "Tente adivinhar o número entre 1 e 100." << endl;
+
+    while (!acertou) {
+        cout << "Digite sua tentativa: ";
+        cin >> tentativa;
+        tentativas++;
+
+        if (tentativa == numeroAleatorio) {
+            cout << "Parabéns! Você acertou em " << tentativas << " tentativa(s)." << endl;
+            acertou = true;
+        } else if (tentativa < numeroAleatorio) {
+            cout << "Tente um número maior." << endl;
+        } else {
+            cout << "Tente um número menor." << endl;
+        }
+    }
+
+    return 0;
+}
